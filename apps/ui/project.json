@@ -49,8 +49,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "ui:build",
-        "hmr": true,
-        "port": 8888
+        "hmr": true
       },
       "configurations": {
         "development": {
