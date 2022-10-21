@@ -14,8 +14,8 @@ describe('AppService', () => {
   });
 
   describe('getData', () => {
-    it('should return "Welcome to isomera!"', () => {
-      expect(service.getData()).toEqual({ message: 'Welcome to isomera!' });
+    it('should return "Welcome to api!"', () => {
+      expect(service.getData()).toEqual({ message: 'Welcome to api!' });
     });
   });
 });
