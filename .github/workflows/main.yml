@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
 
       - uses: nrwl/nx-set-shas@v3
-      - run: npm install
+      - run: yarn install
 
       - run: npx nx workspace-lint
       - run: npx nx format:check --verbose
