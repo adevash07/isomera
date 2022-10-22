@@ -10,6 +10,8 @@
     "test:e2e": "nx e2e ui-e2e",
     "test:e2e:watch": "nx e2e ui-e2e --watch",
     "lint": "nx workspace-lint && npx nx run-many --all --target=lint --parallel",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "start:ui": "nx run ui:serve",
     "start:api": "nx run api:serve"
   },
@@ -74,4 +76,3 @@
     "typescript": "~4.8.2"
   }
 }
-
