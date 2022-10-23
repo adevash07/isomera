@@ -1,10 +1,18 @@
-import { Injectable, Logger } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  Logger,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as bcryptjs from 'bcryptjs';
 import { validate } from 'class-validator';
 import { LoggerService } from '../logger/logger.service';
 import { UsersService } from '../users/users.service';
 import { UsersDTO } from '../users/dto/create-user.dto';
+import { AuthLoginDto } from './dto/auth-login.dto';
+import { AuthRegisterDto } from './dto/auth-register.dto';
 
 @Injectable()
 export class AuthService {
@@ -14,7 +22,7 @@ export class AuthService {
     private userservice: UsersService
   ) {}
 
-  async login(user: any): Promise<Record<string, any>> {
+  async login(user: AuthLoginDto): Promise<Record<string, any>> {
     // Validation Flag
     let isOk = false;
 
@@ -39,7 +47,7 @@ export class AuthService {
 
       // Check if user exists
       if (userDetails == null) {
-        return { status: 401, msg: { msg: 'Invalid credentials' } };
+        throw new UnauthorizedException('Invalid credentials');
       }
 
       // Check if the given password match with saved password
@@ -55,14 +63,14 @@ export class AuthService {
         };
       } else {
         // Password or email does not match
-        return { status: 401, msg: { msg: 'Invalid credentials' } };
+        throw new UnauthorizedException('Invalid credentials');
       }
     } else {
-      return { status: 400, msg: { msg: 'Invalid fields.' } };
+      throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
     }
   }
 
-  async register(body: any): Promise<Record<string, any>> {
+  async register(body: AuthRegisterDto): Promise<Record<string, any>> {
     // Validation Flag
     let isOk = false;
 

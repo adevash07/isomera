@@ -27,6 +27,7 @@ export class WebsitesService {
   }
 
   create(createWebsiteDto: CreateWebsiteDto) {
+    this.logger.debug(createWebsiteDto.toString());
     return 'This action adds a new website';
   }
 
@@ -39,6 +40,7 @@ export class WebsitesService {
   }
 
   update(id: number, updateWebsiteDto: UpdateWebsiteDto) {
+    this.logger.debug(updateWebsiteDto.toString());
     return `This action updates a #${id} website`;
   }
 

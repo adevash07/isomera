@@ -1,13 +1,17 @@
 import {
   ExecutionContext,
   Injectable,
+  Logger,
   UnauthorizedException,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { LoggerService } from '../../logger/logger.service';
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {
-  constructor() {
+  constructor(
+    private readonly logger: LoggerService = new Logger('jwt-auth-guard')
+  ) {
     super({
       passReqToCallback: true,
     });
@@ -20,6 +24,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
   }
 
   handleRequest(err, user, info) {
+    this.logger.debug(info);
     // If authentication fails, we throw an UnauthorizedException so that
     if (err || !user) {
       throw err || new UnauthorizedException();

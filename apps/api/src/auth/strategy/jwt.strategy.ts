@@ -4,6 +4,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { AuthService } from '../auth.service';
 import { UsersService } from '../../users/users.service';
 import { User } from '../../users/entities/user.entity';
+import { AuthLoginDto } from '../dto/auth-login.dto';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
@@ -24,7 +25,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
    * @param payload string
    * @returns User
    */
-  async validate(payload: any): Promise<User> {
+  async validate(payload: AuthLoginDto): Promise<User> {
     // Accept the JWT and attempt to validate it using the user service
     const user = await this.userservice.findOne(payload.email);
 

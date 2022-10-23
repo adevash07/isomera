@@ -19,11 +19,6 @@ export const dbConfigProduction = (): PostgresConnectionOptions => ({
   migrationsRun: false,
   logging: false,
   migrations: [join(__dirname, '../migrations/**/*{.ts,.js}')],
-  // @ts-ignore
-  cli: {
-    migrationsDir: join(__dirname, '../migrations'),
-    entitiesDir: join(__dirname, '../**/*.entity{.ts,.js}'),
-  },
 });
 
 export const dbConfigDev = (): SqliteConnectionOptions => ({
