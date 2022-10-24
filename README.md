@@ -63,6 +63,14 @@ This command generates a brand new project with the default features (authentica
 
 Enjoy 🎉
 
+### Development
+
+Locally it will use SQLite database so it would be easier to develop and test. For production, it is originally intended to be used with
+PostgreSQL. It uses TypeORM so it's quite easy to adapt to any other database.
+
+Project is managed by NX - next generation build system with first class monorepo support and powerful integrations.
+Documentation can be found here https://nx.dev/getting-started/intro
+
 ### Built in tools
 
 🚀 GraphQL http://localhost:3000/graphql
