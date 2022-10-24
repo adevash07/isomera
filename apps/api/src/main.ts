@@ -15,7 +15,14 @@ async function bootstrap() {
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy:
+        process.env.NODE_ENV === 'production' ? undefined : false,
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === 'production' ? undefined : false,
+    })
+  );
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
 
@@ -23,11 +30,11 @@ async function bootstrap() {
     .setTitle('Isomera')
     .setDescription('Isomera Headless CMS API')
     .setVersion('0.0.1')
-    .addTag('api')
+    .addTag('swagger')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
 
   const port = process.env.PORT || 3333;
   await app.listen(port);

@@ -13,6 +13,27 @@
 </p>
 <br/>
 
+## Goals
+
+- To make representative business websites development easier and faster;
+- Remove the hassle of setting up backend hosting and database;
+- Make it lightning fast for Next.js and Vercel combination by creating SDKs;
+- No need to worry about Admin and admin user roles;
+- Allow developers to take care of rocket science in configs and leave clients' blogging rights;
+
+## Key features to be built
+
+- Authentification with email, Google, and Facebook;
+- Roles for developer and client;
+- Models, entities, and data manipulation;
+- Key / value settings;
+- Ability to have contacts form and way to store that information (so we wouldn't have to figure out how to deal with contacts form separately...);
+- Menus, a.k.a. navigation management;
+- Media library and handling, compression to `.webp` format;
+- Some analytics solutions to know what's going on;
+
+So basically it's a simple CMS that would work best for representative simple business sites.
+
 ## Getting Started
 
 ### ⏳ Installation
@@ -29,6 +50,13 @@ yarn start
 This command generates a brand new project with the default features (authentication, permissions, content management, content type builder & file upload).
 
 Enjoy 🎉
+
+### Built in tools
+
+🚀 GraphQL http://localhost:3000/graphql
+
+🚀 Swagger http://localhost:3000/swagger
+
 
 ### 🖐 Requirements
 

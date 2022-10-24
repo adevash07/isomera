@@ -8,6 +8,10 @@ import configuration from '../config';
 import { AuthModule } from '../auth/auth.module';
 import { UsersModule } from '../users/users.module';
 import { WebsitesModule } from '../websites/websites.module';
+import { GraphQLModule } from '@nestjs/graphql';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { join } from 'path';
+import { AppResolver } from './app.resolver';
 
 @Module({
   imports: [
@@ -25,8 +29,13 @@ import { WebsitesModule } from '../websites/websites.module';
     AuthModule,
     UsersModule,
     WebsitesModule,
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
+      autoSchemaFile: join(process.cwd(), 'apps/api/schema.gql'),
+      sortSchema: true,
+    }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppResolver],
 })
 export class AppModule {}
