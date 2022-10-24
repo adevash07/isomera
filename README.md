@@ -34,6 +34,18 @@
 
 So basically it's a simple CMS that would work best for representative simple business sites.
 
+## Philosophy
+
+In chemistry, isomers are molecules or polyatomic ions with identical molecular formulae – that is,
+same number of atoms of each element – but distinct arrangements of atoms in space. Isomerism is
+existence or possibility of isomers. Isomers do not necessarily share similar chemical or
+physical properties.
+
+Similar in WEB developers life - if you deal with simple representative websites, preparation for each is
+more or less identical to all other. You need admin panel, you need to host is somewhere, you need database
+for admin panel, you need to host website itself and so on. Most boring, repetitive part seems to be
+Admin part so it was decided to build this headless CMS to allow way faster bootstrapping!
+
 ## Getting Started
 
 ### ⏳ Installation
