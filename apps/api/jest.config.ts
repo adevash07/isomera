@@ -1,16 +1,19 @@
-/* eslint-disable */
-export default {
+import type { JestConfigWithTsJest } from 'ts-jest';
+
+const jestConfig: JestConfigWithTsJest = {
   displayName: 'api',
   preset: '../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
+  transform: {
+    '^.+\\.[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+      },
+    ],
   },
   testEnvironment: 'node',
-  transform: {
-    '^.+\\.[tj]s$': 'ts-jest',
-  },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/apps/api',
 };
+
+export default jestConfig;
