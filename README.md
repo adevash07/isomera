@@ -1,4 +1,5 @@
 ![isomera-logo](https://user-images.githubusercontent.com/723200/197463055-e22f4da3-69de-4b6c-ab4d-4132b45c701c.png)
+
 <h1 align="center">Isomera - headless CMS for business representative websites</h1>
 <br/>
 <p align="center">
@@ -77,7 +78,6 @@ Documentation can be found here https://nx.dev/getting-started/intro
 🚀 GraphQL http://localhost:3000/graphql
 
 🚀 Swagger http://localhost:3000/swagger
-
 
 ### 🖐 Requirements
 

@@ -10,15 +10,15 @@ import { APP_GUARD } from '@nestjs/core';
 import { PassportModule } from '@nestjs/passport';
 import { Test, type TestingModule } from '@nestjs/testing';
 import type { Request as Req } from 'express';
-import * as session from 'express-session';
-import * as request from 'supertest';
+import session from 'express-session';
+import request from 'supertest';
 import { createMock } from 'ts-auto-mock';
 
+import type { User } from '../../user/user.entity';
 import { AuthService } from '../auth.service';
 import { SessionSerializer } from '../session.serializer';
-import { LocalStrategy } from '../strategy/;
+import { LocalStrategy } from '../strategies/local.strategy';
 import { LocalAuthGuard } from './local-auth.guard';
-import { User } from '../../users/entities/user.entity';
 
 @Controller()
 class TestController {
@@ -69,7 +69,7 @@ describe('LocalAuthGuard', () => {
     mockedAuthService.login.mockResolvedValueOnce(
       createMock<User>({
         email: 'john@doe.me',
-        id: '1',
+        id: 1,
         name: 'John Doe ',
       })
     );

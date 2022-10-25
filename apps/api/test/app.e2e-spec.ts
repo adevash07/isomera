@@ -33,7 +33,7 @@ describe('AppController (e2e)', () => {
     await request(app.getHttpServer())
       .get('/health')
       .expect(HttpStatus.OK)
-      .expect(response =>
+      .expect((response) =>
         expect(response.body).toMatchObject(
           expect.objectContaining({
             details: {
@@ -54,8 +54,8 @@ describe('AppController (e2e)', () => {
               },
             },
             status: 'ok',
-          }),
-        ),
+          })
+        )
       );
   });
 });

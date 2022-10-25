@@ -64,7 +64,7 @@ describe('AuthController (e2e)', () => {
       expect(resp.body).toBeDefined();
       expect(resp.body.password).toBeUndefined();
       if (resp.ok) expect(resp.header.authorization).toMatch(/Bearer\s+.*/);
-    },
+    }
   );
 
   it('should get session user', async () => {

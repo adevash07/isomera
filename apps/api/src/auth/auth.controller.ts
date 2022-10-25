@@ -1,24 +1,40 @@
-import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Post,
+  UseGuards,
+  UseInterceptors,
+} from '@nestjs/common';
+
+import { AuthUser } from '../user/user.decorator';
+import { User } from '../user/user.entity';
 import { AuthService } from './auth.service';
-import { AuthLoginDto } from './dto/auth-login.dto';
-import { AuthRegisterDto } from './dto/auth-register.dto';
-import { User } from '../users/entities/user.entity';
-import { SessionAuthGuard } from './guards/session-auth.guard';
+import { SignUp } from './dto/sign-up.dto';
 import { JWTAuthGuard } from './guards/jwt-auth.guard';
-import { AuthUser } from '../users/user.decorator';
+import { LocalAuthGuard } from './guards/local-auth.guard';
+import { SessionAuthGuard } from './guards/session-auth.guard';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
-
-  @Post('login')
-  async login(@Body() loginDto: AuthLoginDto) {
-    return await this.authService.login(loginDto);
-  }
+  constructor(private readonly authService: AuthService) {}
 
   @Post('register')
-  async register(@Body() authRegisterDto: AuthRegisterDto) {
-    return await this.authService.register(authRegisterDto);
+  @HttpCode(HttpStatus.CREATED)
+  @UseInterceptors(TokenInterceptor)
+  register(@Body() signUp: SignUp): Promise<User> {
+    return this.authService.register(signUp);
+  }
+
+  @Post('login')
+  @UseGuards(LocalAuthGuard)
+  @HttpCode(HttpStatus.OK)
+  @UseInterceptors(TokenInterceptor)
+  async login(@AuthUser() user: User): Promise<User> {
+    return user;
   }
 
   @Get('/me')

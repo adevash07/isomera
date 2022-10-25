@@ -1,37 +1,30 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
-import { AuthService } from './auth.service';
-import { JwtStrategy } from './strategy/jwt.strategy';
+
+import { UserModule } from '../user/user.module';
 import { AuthController } from './auth.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { LoggerModule } from '../logger/logger.module';
-import { UsersModule } from '../users/users.module';
-import { User } from '../users/entities/user.entity';
+import { AuthService } from './auth.service';
+import { SessionSerializer } from './session.serializer';
+import { JwtStrategy } from './strategies/jwt.strategy';
+import { LocalStrategy } from './strategies/local.strategy';
 
 @Module({
   imports: [
-    UsersModule,
-    LoggerModule,
-    PassportModule.register({
-      defaultStrategy: 'jwt',
-      property: 'user',
-      session: false,
+    UserModule,
+    PassportModule.register({ defaultStrategy: 'jwt' }),
+    JwtModule.register({
+      secret: process.env.APP_SECRET,
+      signOptions: {
+        expiresIn: '1d',
+        algorithm: 'HS384',
+      },
+      verifyOptions: {
+        algorithms: ['HS384'],
+      },
     }),
-    JwtModule.registerAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        privateKey: configService.get<string>('keys.privateKey'),
-        publicKey: configService.get<string>('keys.publicKey'),
-        signOptions: { expiresIn: '60s', algorithm: 'RS256' },
-      }),
-      inject: [ConfigService],
-    }),
-    TypeOrmModule.forFeature([User]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy],
-  // exports: [AuthService, JwtModule, PassportModule],
+  providers: [AuthService, LocalStrategy, JwtStrategy, SessionSerializer],
 })
 export class AuthModule {}
