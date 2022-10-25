@@ -35,6 +35,8 @@
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "connect-pg-simple": "^7.0.0",
+    "cookie-parser": "^1.4.6",
     "core-js": "^3.6.5",
     "dotenv": "^16.0.3",
     "express-session": "^1.17.3",
@@ -62,6 +64,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@faker-js/faker": "^7.6.0",
+    "@jackfranklin/test-data-bot": "^2.0.0",
     "@nestjs/cli": "^9.1.4",
     "@nestjs/schematics": "^9.0.3",
     "@nestjs/testing": "^9.1.5",

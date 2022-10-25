@@ -4,8 +4,8 @@ import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import * as supertest from 'supertest';
 
-import { AppModule } from '../src/app.module';
 import { setup } from '../src/setup';
+import { AppModule } from '../src/app/app.module';
 
 const userBuilder = build({
   fields: {
