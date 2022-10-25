@@ -29,6 +29,7 @@
     "@nestjs/platform-express": "^9.1.5",
     "@nestjs/schedule": "^2.1.0",
     "@nestjs/swagger": "^6.1.2",
+    "@nestjs/terminus": "^9.1.2",
     "@nestjs/typeorm": "^9.0.1",
     "apollo-server": "^3.10.3",
     "apollo-server-core": "^3.10.3",

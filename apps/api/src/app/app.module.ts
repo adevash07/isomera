@@ -12,6 +12,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { AppResolver } from './app.resolver';
+import { TerminusModule } from '@nestjs/terminus';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { AppResolver } from './app.resolver';
       autoSchemaFile: join(process.cwd(), 'apps/api/schema.gql'),
       sortSchema: true,
     }),
+    TerminusModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppResolver],
