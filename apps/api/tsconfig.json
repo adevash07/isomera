@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "esModuleInterop": true,
     "plugins": [
       {
         "transform": "ts-auto-mock/transformer",

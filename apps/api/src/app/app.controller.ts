@@ -27,7 +27,7 @@ export class AppController {
     res.status(200).json(body);
   }
 
-  @Get()
+  @Get('health')
   @HealthCheck()
   check(): Promise<HealthCheckResult> {
     return this.health.check([
