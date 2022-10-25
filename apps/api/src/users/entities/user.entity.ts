@@ -8,7 +8,7 @@ import { Role } from '../enums/role.enum';
 export class User {
   @Field()
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Field()
   @Column()
