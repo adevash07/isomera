@@ -1,5 +1,8 @@
-![isomera-logo](https://user-images.githubusercontent.com/723200/197463055-e22f4da3-69de-4b6c-ab4d-4132b45c701c.png)
-
+<br/>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/723200/197463055-e22f4da3-69de-4b6c-ab4d-4132b45c701c.png" alt="Isomera logo" />
+</p>
+<br/>
 <h1 align="center">Isomera - headless CMS for business representative websites</h1>
 <br/>
 <p align="center">
