@@ -56,7 +56,7 @@ describe('LocalAuthGuard', () => {
     app = module.createNestApplication();
     app.use(
       session({
-        secret: 'secret',
+        secret: String(process.env.SESSION_SECRET || 'secret'),
         resave: false,
         saveUninitialized: false,
       })
