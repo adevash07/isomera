@@ -71,7 +71,7 @@
         "cwd": "apps/api"
       }
     },
-    "add:migration": {
+    "add-migration": {
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
@@ -79,7 +79,7 @@
         "cwd": "apps/api"
       }
     },
-    "apply:migration": {
+    "apply-migration": {
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
@@ -87,7 +87,7 @@
         "cwd": "apps/api"
       }
     },
-    "revert:migration": {
+    "revert-migration": {
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
@@ -95,7 +95,7 @@
         "cwd": "apps/api"
       }
     },
-    "drop:database": {
+    "drop-database": {
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
