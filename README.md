@@ -54,6 +54,10 @@ more or less identical to all other. You need admin panel, you need to host is s
 for admin panel, you need to host website itself and so on. Most boring, repetitive part seems to be
 Admin part so it was decided to build this headless CMS to allow way faster bootstrapping!
 
+## Product roadmap
+
+🚀 https://www.figma.com/file/h4TW7xZmZtsCikldbx9HVj/Isomera-Roadmap
+
 # Contributions
 
 Any kind of contributions are welcome! Feel free to open a PR with your changes ♥️
