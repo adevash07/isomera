@@ -48,6 +48,16 @@ more or less identical to all other. You need admin panel, you need to host is s
 for admin panel, you need to host website itself and so on. Most boring, repetitive part seems to be
 Admin part so it was decided to build this headless CMS to allow way faster bootstrapping!
 
+# Contributions
+
+Any kind of contributions are welcome! Feel free to open a PR with your changes ♥️
+
+Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.
+
+![Alt Text](https://media2.giphy.com/media/z24q9PQNlw19u/giphy.gif)
+
+# Coding
+
 ## Getting Started
 
 ### ⏳ Installation
@@ -72,6 +82,8 @@ PostgreSQL. It uses TypeORM so it's quite easy to adapt to any other database.
 
 Project is managed by NX - next generation build system with first class monorepo support and powerful integrations.
 Documentation can be found here https://nx.dev/getting-started/intro
+
+![Alt Text](https://media2.giphy.com/media/H1dxi6xdh4NGQCZSvz/giphy.gif)
 
 ### Built in tools
 
