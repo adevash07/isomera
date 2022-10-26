@@ -15,6 +15,9 @@
   <a href="https://github.com/cortip/isomera/actions/workflows/codeql.yml">
     <img src="https://github.com/cortip/isomera/actions/workflows/codeql.yml/badge.svg" alt="Isomera Code QL Status" />
   </a>
+  <a href="https://cla-assistant.io/cortip/isomera">
+    <img src="https://cla-assistant.io/readme/badge/cortip/isomera" alt="CLA assistant" />
+  </a>
 </p>
 <br/>
 
