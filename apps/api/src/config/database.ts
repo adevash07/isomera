@@ -1,8 +1,9 @@
 import { join } from 'path';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import { SqliteConnectionOptions } from 'typeorm/driver/sqlite/SqliteConnectionOptions';
+import { DataSource } from 'typeorm';
 
-export const dbConfigProduction = (): PostgresConnectionOptions => ({
+export const dbConfigPg = (): PostgresConnectionOptions => ({
   type: 'postgres',
   host: process.env.POSTGRES_HOST,
   port: parseInt(process.env.POSTGRES_PORT, 10) || 5432,
@@ -30,7 +31,9 @@ export const dbConfigDev = (): SqliteConnectionOptions => ({
   dropSchema: false,
   // Run migrations automatically,
   // you can disable this if you prefer running migration manually.
-  migrationsRun: false,
+  migrationsRun: true,
   logging: true,
   migrations: [join(__dirname, '../migrations/**/*{.ts,.js}')],
 });
+
+export default new DataSource(dbConfigPg());

@@ -1,5 +1,5 @@
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
-import { dbConfigProduction, dbConfigDev } from './database';
+import { dbConfigPg, dbConfigDev } from './database';
 import { SqliteConnectionOptions } from 'typeorm/driver/sqlite/SqliteConnectionOptions';
 
 interface ConfigInterface {
@@ -18,7 +18,5 @@ export default (): Partial<ConfigInterface> => ({
     publicKey: process.env.PUBLIC_KEY.replace(/\\n/gm, '\n'),
   },
   database:
-    String(process.env.ENV) === 'production'
-      ? dbConfigProduction()
-      : dbConfigDev(),
+    String(process.env.ENV) === 'production' ? dbConfigPg() : dbConfigDev(),
 });

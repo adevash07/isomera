@@ -75,7 +75,7 @@
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
-        "command": "yarn build && ts-node --transpile-only -r tsconfig-paths/register ./../../node_modules/typeorm/cli.js --config src/config/database.ts migration:generate -- -n",
+        "command": "yarn build && ts-node --transpile-only -r tsconfig-paths/register ./../../node_modules/typeorm/cli.js --config src/config/database.ts migration:generate -- -n --dataSource src/config/database.ts",
         "cwd": "apps/api"
       }
     },

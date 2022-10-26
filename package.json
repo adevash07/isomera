@@ -13,7 +13,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "start:ui": "nx run ui:serve",
-    "start:api": "nx run api:serve"
+    "start:api": "nx run api:serve",
+    "create-entities-index": "ts-node --pretty --project=tools/tsconfig.tools.json tools/create-entities-index.ts"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +43,7 @@
     "core-js": "^3.6.5",
     "dotenv": "^16.0.3",
     "express-session": "^1.17.3",
+    "fast-glob": "^3.2.12",
     "graphql": "^16.6.0",
     "helmet": "^6.0.0",
     "mailgun.js": "^8.0.2",
