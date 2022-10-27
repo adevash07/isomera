@@ -1,7 +1,10 @@
 <br/>
+<br/>
+<br/>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/723200/197463055-e22f4da3-69de-4b6c-ab4d-4132b45c701c.png" alt="Isomera logo" />
+  <img src="https://user-images.githubusercontent.com/723200/198200316-9aebcfda-19b8-414c-af44-1562daf6c802.png" alt="Isomera logo" />
 </p>
+<br/>
 <br/>
 <h1 align="center">Isomera - headless CMS for business representative websites</h1>
 <br/>
@@ -92,8 +95,6 @@ PostgreSQL. It uses TypeORM so it's quite easy to adapt to any other database.
 
 Project is managed by NX - next generation build system with first class monorepo support and powerful integrations.
 Documentation can be found here https://nx.dev/getting-started/intro
-
-![Alt Text](https://media2.giphy.com/media/H1dxi6xdh4NGQCZSvz/giphy.gif)
 
 ### Built in tools
 
