@@ -11,7 +11,7 @@
 <br/>
 <p align="center">
   <a href="https://doc.isomera.org" target="_blank">
-    <img src="https://img.shields.io/badge/%F0%9F%93%96-Documentation-blue" alt="Doc" />
+    <img src="https://isomera-compodoc.vercel.app/images/coverage-badge-documentation.svg" alt="Doc" />
   </a>
   <a href="https://discord.gg/Q78c7yGB" target="_blank">
     <img src="https://img.shields.io/discord/1033259861917569094?label=Discord" alt="Isomera on Discord" />
