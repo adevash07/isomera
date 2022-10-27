@@ -142,6 +142,17 @@ For general help using Isomera, please refer to [the official Isomera documentat
 - [Discord](https://discord.gg/Q78c7yGB) (For live discussion with the Community and Isomera team)
 - [GitHub](https://github.com/cortip/isomera) (Bug reports, Contributions)
 
+## Contributors
+
+<p>
+  <a href="https://github.com/vygandas" target="_blank">
+    <img src="https://github.com/vygandas.png" alt="Vygandas Pliasas" width="70" height="70" />
+  </a>
+  <a href="https://github.com/CristoferPortela" target="_blank">
+    <img src="https://github.com/CristoferPortela.png" alt="Cristofer Portela" width="70" height="70" />
+  </a>
+</p>
+
 ## License
 
 See the [LICENSE](./LICENSE) file for licensing information.
