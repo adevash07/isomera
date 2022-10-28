@@ -146,11 +146,6 @@
     "ttypescript": "^1.5.13",
     "typescript": "^4.8.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,json,md,ts,tsx}": "yarn format --uncommited"
   }
