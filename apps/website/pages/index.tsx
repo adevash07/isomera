@@ -13,7 +13,9 @@ export function Index() {
       <Head>
         <title>Next App</title>
       </Head>
-      <StyledPage>ad</StyledPage>
+      <StyledPage>
+        <h1>Isomera</h1>
+      </StyledPage>
     </>
   );
 }
