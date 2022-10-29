@@ -39,6 +39,8 @@
 <br/>
 <br/>
 
+#### ⚠️ Any larger feature or improvement should be aligned with the team and there must be ticket created for that. Also we should try to stick to the roadmap.
+
 ## Goals
 
 - To make representative business websites development easier and faster;
@@ -143,6 +145,14 @@ yarn lint
 🚀 GraphQL http://localhost:3000/graphql
 
 🚀 Swagger http://localhost:3000/swagger
+
+### Design
+
+For nicer visualisation we're using [Material UI Devias Kit - React Admin Dashboard](https://mui.com/store/items/devias-kit/) free version.
+
+If you're contributing, please download this template and extract parts needed and use it here. Let's not deviate too much.
+
+![Material UI Devias kit](https://user-images.githubusercontent.com/723200/198817781-3dbe8c6d-7c42-4aa0-aa97-6896fd80d19a.png)
 
 ### 🖐 Requirements
 
