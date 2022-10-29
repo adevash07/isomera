@@ -41,6 +41,18 @@
 
 #### ⚠️ Any larger feature or improvement should be aligned with the team and there must be ticket created for that. Also we should try to stick to the roadmap.
 
+### Technical stack
+
+- React
+- Next
+- Nest
+- TypeScript
+- TypeORM
+- Redux, Redux-toolkit
+- Axios
+- PostgreSQL
+- NX
+
 ## Goals
 
 - To make representative business websites development easier and faster;
