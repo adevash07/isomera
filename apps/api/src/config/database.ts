@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { PostgresConnectionOptions, } from 'typeorm/driver/postgres/PostgresConnectionOptions';
+import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 import { DataSource } from 'typeorm';
 import { SqliteConnectionOptions } from 'typeorm/driver/sqlite/SqliteConnectionOptions';
 

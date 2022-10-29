@@ -1,0 +1,20 @@
+name: Commit Test
+on:
+  workflow_run:
+    workflows: ['Commit Code Style']
+    types:
+      - completed
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: nrwl/nx-set-shas@v3
+      - run: yarn install
+
+      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
+      - run: npx nx affected --target=build --parallel=3
