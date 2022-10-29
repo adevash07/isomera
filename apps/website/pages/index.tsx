@@ -1,25 +1,29 @@
-import styled from 'styled-components';
 import * as React from 'react';
 import Head from 'next/head';
+import { Box, Container, Typography } from '@mui/material';
+import { TopNavigationComponent } from '../components/TopNavigation/TopNavigation.component';
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.styled-components file.
-   */
   return (
     <>
       <Head>
-        <title>Next App</title>
+        <title>Isomera - Headless CMS built by community</title>
       </Head>
-      <StyledPage>
-        <h1>Isomera</h1>
-      </StyledPage>
+      <Container>
+        <TopNavigationComponent />
+        <Box sx={{ mt: 20, textAlign: 'center' }}>
+          <Typography variant="h1">Isomera</Typography>
+          <Typography variant="h2" mt={3}>
+            Free Cloud Hosted Headless CMS{' '}
+            <span style={{ color: 'red' }}>built by community</span>
+          </Typography>
+          <Typography variant="h3" mt={3}>
+            Under Construction 🏗
+          </Typography>
+        </Box>
+      </Container>
     </>
   );
 }
 
 export default Index;
-
-const StyledPage = styled.div``;

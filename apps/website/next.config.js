@@ -19,10 +19,10 @@ const nextConfig = {
   },
   // reactStrictMode: true,
   // experimental: {},
-  // compiler: {
-  //   // Enables the styled-components SWC transform
-  //   styledComponents: true,
-  // },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
+  },
   // webpack: (config) => {
   //   config.resolve.alias = {
   //     ...config.resolve.alias,

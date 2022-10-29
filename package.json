@@ -91,6 +91,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@emotion/babel-plugin": "^11.10.5",
     "@faker-js/faker": "^7.6.0",
     "@jackfranklin/test-data-bot": "^2.0.0",
     "@nestjs/cli": "^9.1.4",
