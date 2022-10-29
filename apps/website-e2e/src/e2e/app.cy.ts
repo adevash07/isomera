@@ -4,7 +4,7 @@ describe('website', () => {
   beforeEach(() =>
     cy.visit('/', {
       headers: { 'Accept-Encoding': 'gzip, deflate' },
-      timeout: 25000,
+      timeout: 60000 * 5,
     })
   );
 
