@@ -53,7 +53,7 @@
 - PostgreSQL
 - NX
 
-## Goals
+## 🎯 Goals
 
 - To make representative business websites development easier and faster;
 - Remove the hassle of setting up backend hosting and database;
@@ -61,7 +61,7 @@
 - No need to worry about Admin and admin user roles;
 - Allow developers to take care of rocket science in configs and leave clients' blogging rights;
 
-## Key features to be built
+## ☑️ Key features to be built
 
 - Authentification with email, Google, and Facebook;
 - Roles for developer and client;
@@ -74,7 +74,7 @@
 
 So basically it's a simple CMS that would work best for representative simple business sites.
 
-## Philosophy
+## 💡 Philosophy
 
 In chemistry, isomers are molecules or polyatomic ions with identical molecular formulae – that is,
 same number of atoms of each element – but distinct arrangements of atoms in space. Isomerism is
