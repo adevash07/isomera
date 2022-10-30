@@ -16,8 +16,11 @@
   <a href="https://discord.gg/Q78c7yGB" target="_blank">
     <img src="https://img.shields.io/discord/1033259861917569094?label=Discord" alt="Isomera on Discord" />
   </a>
-  <a href="https://github.com/cortip/isomera/actions/workflows/main.yml" target="_blank">
-    <img src="https://github.com/cortip/isomera/actions/workflows/main.yml/badge.svg?branch=main" alt="CI" />
+  <a href="https://github.com/cortip/isomera/actions/workflows/commit_test.yml" target="_blank">
+    <img src="https://github.com/cortip/isomera/actions/workflows/commit_test.yml/badge.svg?branch=main" alt="CI test" />
+  </a>
+  <a href="https://github.com/cortip/isomera/actions/workflows/commit_e2e.yml" target="_blank">
+    <img src="https://github.com/cortip/isomera/actions/workflows/commit_e2e.yml/badge.svg?branch=main" alt="CI e2e" />
   </a>
   <a href="https://github.com/cortip/isomera/actions/workflows/codeql.yml" target="_blank">
     <img src="https://github.com/cortip/isomera/actions/workflows/codeql.yml/badge.svg" alt="Isomera Code QL Status" />
