@@ -6,6 +6,7 @@ import axios from 'axios';
 import { FC } from 'react';
 import { GithubContributorInterface } from '@isomera/interfaces';
 import { ContributorsComponent } from '../components/Contributors/Contributors.component';
+import { GetServerSideProps } from 'next';
 
 interface Props {
   contributors: Array<GithubContributorInterface>;
@@ -45,7 +46,9 @@ export const Index: FC<Props> = ({ contributors }) => {
 
 export default Index;
 
-export async function getServerSideProps({ res }) {
+export const getServerSideProps: GetServerSideProps<{
+  contributors: Array<GithubContributorInterface>;
+}> = async ({ res }) => {
   res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
@@ -56,10 +59,12 @@ export async function getServerSideProps({ res }) {
     const response = await axios.get(
       `https://api.github.com/repos/cortip/isomera/stats/contributors`
     );
-    data = response.data;
+    if (response && [200, 201].includes(response.status) && response.data) {
+      data = response.data;
+    }
   } catch (e) {
     console.error(e);
   }
 
   return { props: { contributors: data } };
-}
+};
