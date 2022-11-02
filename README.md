@@ -48,6 +48,7 @@
 <br/>
 
 ### ❤️ Project sponsors
+
 <p>
   <a href="https://sentry.io/organizations/isomera/projects/">
   <img src="https://user-images.githubusercontent.com/723200/199423769-380ac0c5-6337-4cd1-bfc4-18f031f6782c.png" width="70" alt="sentry-logo" />
