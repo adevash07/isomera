@@ -1,4 +1,4 @@
-name: CI
+name: Commit Code Style
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -20,10 +20,3 @@ jobs:
       - run: npx nx format --target=check --base=remotes/origin/main --head=HEAD
       - run: yarn prettier
       - run: npx nx affected --target=lint --parallel=3
-      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
-      - run: npx nx affected --target=build --parallel=3
-      - run: npx nx e2e --project dashboard-e2e --headless
-      - run: npx nx e2e --project website-e2e --headless
-
-      - name: Generate Codecov Report
-        uses: codecov/codecov-action@v3

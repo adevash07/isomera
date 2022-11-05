@@ -13,11 +13,14 @@
   <a href="https://doc.isomera.org" target="_blank">
     <img src="https://isomera-compodoc.vercel.app/images/coverage-badge-documentation.svg" alt="Doc" />
   </a>
-  <a href="https://discord.gg/Q78c7yGB" target="_blank">
+  <a href="https://discord.gg/7a4uAzeYd9" target="_blank">
     <img src="https://img.shields.io/discord/1033259861917569094?label=Discord" alt="Isomera on Discord" />
   </a>
-  <a href="https://github.com/cortip/isomera/actions/workflows/main.yml" target="_blank">
-    <img src="https://github.com/cortip/isomera/actions/workflows/main.yml/badge.svg?branch=main" alt="CI" />
+  <a href="https://github.com/cortip/isomera/actions/workflows/commit_test.yml" target="_blank">
+    <img src="https://github.com/cortip/isomera/actions/workflows/commit_test.yml/badge.svg?branch=main" alt="CI test" />
+  </a>
+  <a href="https://github.com/cortip/isomera/actions/workflows/commit_e2e.yml" target="_blank">
+    <img src="https://github.com/cortip/isomera/actions/workflows/commit_e2e.yml/badge.svg?branch=main" alt="CI e2e" />
   </a>
   <a href="https://github.com/cortip/isomera/actions/workflows/codeql.yml" target="_blank">
     <img src="https://github.com/cortip/isomera/actions/workflows/codeql.yml/badge.svg" alt="Isomera Code QL Status" />
@@ -41,7 +44,25 @@
 
 #### ⚠️ Any larger feature or improvement should be aligned with the team and there must be ticket created for that. Also we should try to stick to the roadmap.
 
-### Technical stack
+<br/>
+<br/>
+
+### ❤️ Project sponsors
+
+<p>
+  <a href="https://sentry.io/organizations/isomera/projects/">
+  <img src="https://user-images.githubusercontent.com/723200/199423769-380ac0c5-6337-4cd1-bfc4-18f031f6782c.png" width="70" alt="sentry-logo" />
+  </a>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <a href="https://isomera.atlassian.net/jira/your-work">
+  <img src="https://user-images.githubusercontent.com/723200/199423764-35b9b515-85a6-410a-a9fe-eb79398dde83.png" width="70" alt="atlassian-logo" />
+  </a>
+</p>
+
+<br/>
+<br/>
+
+### 🛠 Technical stack
 
 - React
 - Next
@@ -118,8 +139,10 @@ Install Isomera with this **Quickstart** command to create a Isomera project ins
 - (Use **yarn** to install the Isomera project (recommended). [Install yarn with these docs](https://yarnpkg.com/lang/en/docs/install/).)
 
 ```bash
+docker-compose up -d
 yarn install
-yarn start
+cp .env.example .env
+yarn dev
 ```
 
 This command generates a brand new project with the default features (authentication, permissions, content management, content type builder & file upload).
@@ -202,9 +225,9 @@ Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull
 
 ## Community support
 
-For general help using Isomera, please refer to [the official Isomera documentation](https://docs.isomera.org). For additional help, you can use one of these channels to ask a question:
+For general help using Isomera, please refer to [the official Isomera documentation](https://doc.isomera.org). For additional help, you can use one of these channels to ask a question:
 
-- [Discord](https://discord.gg/Q78c7yGB) (For live discussion with the Community and Isomera team)
+- [Discord](https://discord.gg/7a4uAzeYd9) (For live discussion with the Community and Isomera team)
 - [GitHub](https://github.com/cortip/isomera) (Bug reports, Contributions)
 - [Documentation](https://doc.isomera.org) (Classes, Modules, Endpoints, all kinds of things)
 
